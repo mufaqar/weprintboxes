@@ -3,17 +3,25 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 :root {
-  --primary: #1a4885;
+  --primary: #383882;
+  --prim_hovr: #2c2c6e;
+  --Wp_Green: #006039;
+  --Wp_Green_hovr: green;
   --title: #131313;
-  --desc: #131313;
-  --background: #effcf9;
+  --desc: #585858;
+  --background: #f7f8fc;
+  --Wp_border: #ddd;
 }
 
 @theme inline {
   --color-primary: var(--primary);
+  --color-prim_hovr: var(--prim_hovr);
+  --color-Wp_Green: var(--Wp_Green);
+  --color-Wp_Green_hovr: var(--Wp_Green_hovr);
   --color-title: var(--title);
   --color-desc: var(--desc);
   --color-background: var(--background);
+  --color-Wp_border: var(--Wp_border);
   --font-poppins: var(--font-poppins);
 }
 

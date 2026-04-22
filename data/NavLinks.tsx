@@ -2,72 +2,95 @@
 
 export const Navlinks = [
     {
-        label: "Products",
+        label: "Boxes by industry",
         href: "/all-products",
-        type: "link",
-        icon: "/images/box.png",
-    },
-
-    {
-        label: "Industries",
-        href: "/industries",
         type: "mega",
-        icon: "/images/box.png",
         children: [
             {
-                group: "Shop By Industries",
                 items: [
                     {
-                        label: "Corrugated Boxes",
+                        label: "Top Tuck Auto-lock Boxes",
                         href: "/category/corrugated-boxes",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "Mylar Bags",
                         href: "/mylar-bags",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "CBD Boxes",
                         href: "/cbd-boxes",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "Mailer Boxes",
                         href: "/mailer-boxes",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "Kraft Boxes",
                         href: "/kraft-boxes",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "Cardboard Boxes",
                         href: "/cardboard-boxes",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "Shapes & Styles",
                         href: "/shapes-styles",
-                        icon: "/images/box.png",
                     },
                     {
                         label: "Pet Boxes",
                         href: "/pet-boxes",
-                        icon: "/images/box.png",
                     },
                 ],
             },
         ],
-        footer: {
-            label: "Show All",
-            href: "/industries",
-        },
     },
 
     {
-        label: "Box by Material",
+        label: "Boxes By Style",
+        href: "/industries",
+        type: "mega",
+        children: [
+            {
+                items: [
+                    {
+                        label: "Top Tuck Auto-lock Boxes",
+                        href: "/category/corrugated-boxes",
+                    },
+                    {
+                        label: "Mylar Bags",
+                        href: "/mylar-bags",
+                    },
+                    {
+                        label: "CBD Boxes",
+                        href: "/cbd-boxes",
+                    },
+                    {
+                        label: "Mailer Boxes",
+                        href: "/mailer-boxes",
+                    },
+                    {
+                        label: "Kraft Boxes",
+                        href: "/kraft-boxes",
+                    },
+                    {
+                        label: "Cardboard Boxes",
+                        href: "/cardboard-boxes",
+                    },
+                    {
+                        label: "Shapes & Styles",
+                        href: "/shapes-styles",
+                    },
+                    {
+                        label: "Pet Boxes",
+                        href: "/pet-boxes",
+                    },
+                ],
+            },
+        ],
+    },
+
+    {
+        label: "Boxes By Material",
         href: "/products",
         type: "dropdown",
         children: [
@@ -78,24 +101,8 @@ export const Navlinks = [
     },
 
     {
-        label: "Shapes & Styles",
-        href: "/products",
-        type: "dropdown",
-        children: [
-            { label: "Auto Lock", href: "/shapes/auto-lock" },
-            { label: "Tuck End", href: "/shapes/tuck-end" },
-        ],
-    },
-
-    {
         label: "Contact Us",
         href: "/contact-us",
-        type: "link",
-    },
-
-    {
-        label: "Blog",
-        href: "/blog",
         type: "link",
     },
 ];
@@ -104,7 +111,6 @@ export type NavLink = {
     type: "link";
     label: string;
     href?: string;
-    icon?: string;
 };
 
 export type Dropdown = {
@@ -112,26 +118,18 @@ export type Dropdown = {
     href?: string;
     label: string;
     children: { label: string; href: string }[];
-    icon?: string;
 };
 
 export type MegaMenu = {
     type: "mega";
     href?: string;
     label: string;
-    icon?: string;
     children: {
-        group: string;
         items: {
             label: string;
             href: string;
-            icon: string;
         }[];
     }[];
-    footer?: {
-        label: string;
-        href: string;
-    };
 };
 
 export type NavigationItem = NavLink | Dropdown | MegaMenu;

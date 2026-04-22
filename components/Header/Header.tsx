@@ -3,21 +3,20 @@ import { NavigationItem, Navlinks } from "@/data/NavLinks";
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react";
-import { FaBars, FaChevronRight, FaCross, FaPhoneAlt, FaPhoneVolume, FaSearch } from "react-icons/fa"
+import { FaBars, FaChevronRight, FaPhoneAlt, FaSearch } from "react-icons/fa"
 import { HiChevronDown } from "react-icons/hi"
 import { MdClose } from "react-icons/md";
 import { MblMenu } from "./MblMenu";
+import { FaPhoneVolume } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { BsCart } from "react-icons/bs";
 
 const links: NavigationItem[] = Navlinks;
 
 const Header = () => {
     const [mblMenu, setMblMenu] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
-    const toggleMenu = (label: string) => {
-        setActiveMenu(prev => (prev === label ? null : label));
-    };
     const navRef = useRef<HTMLUListElement>(null);
-
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -29,62 +28,63 @@ const Header = () => {
         return () => document.removeEventListener("mousedown", handler);
     }, []);
     return (
-        <header className="bg-primary py-2 relative">
-            <div className='container mx-auto md:px-0 px-4 flex items-center justify-between'>
+        <header className="bg-background relative">
+            <div className="md:hidden flex gap-2 items-center justify-center bg-Wp_Green">
+                <Link href="tel:8005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
+                    <FaPhoneVolume size={20} />  800 558 8047
+                </Link>
+                <Link href="https://wa.me/+20005588047" className="text-xs font-medium text-white px-3 py-2 rounded-lg flex justify-center items-center gap-1 transition-all duration-300 ease-in-out">
+                    <IoLogoWhatsapp size={18} />  WhatsApp Us
+                </Link>
+            </div>
+            <div className='container mx-auto px-4 md:py-3 py-1.5 flex items-center justify-between border-b border-Wp_border md:border-none'>
                 <div>
                     <Link href="/" className="inline-flex">
-                        <Image src="/images/logowhite.png" alt="logo" width={170} height={90} />
+                        <Image src="/images/logo.png" alt="logo" width={162} height={61} className="md:w-[162px] w-[90px] md:h-auto" />
                     </Link>
 
                 </div>
-                <div className="md:hidden flex items-center gap-5">
-                    <Link href="tel:+1(332)2529988" className="text-white text-2xl">
-                        <FaPhoneAlt />
-                    </Link>
-                    <button onClick={() => setMblMenu(!mblMenu)} className="text-white text-2xl">
-                        {!mblMenu ? <FaBars /> : <MdClose />}
-                    </button>
-                </div>
                 {mblMenu && <MblMenu setMblMenu={setMblMenu} />}
-                <div className="md:block hidden w-80 xl:w-96">
-                    <form className="rounded-md border border-black/20 bg-white flex items-center gap-x-3 pr-3 pl-4 h-10 shadow-[0_0_20px_-3px_rgb(211,211,211)] ">
+                <div className="md:block hidden w-80 xl:w-125">
+                    <form className="rounded-lg border border-Wp_border bg-transparent flex items-center py-2.5 px-4 h-10">
                         <input
                             id="search"
                             name="search"
-                            placeholder="Search by product, categories..."
-                            className="w-full outline-none traking-wider text-xs sm:text-sm h-full text-black" />
+                            placeholder="Search Products..."
+                            className="w-full outline-none traking-wider text-xs sm:text-sm h-full text-desc placeholder:text-desc" />
                         <button className="text-title/50">
                             <FaSearch />
                         </button>
                     </form>
                 </div>
-                <div className="hidden items-start gap-x-10 md:flex lg:mb-0 lg:gap-x-24 xl:gap-x-40">
-                    <div className="flex flex-col items-center gap-y-2">
-                        <p className="whitespace-nowrap text-white text-sm">Talk to our packaging expert</p>
-                        <Link href="tel:+1(332)2529988" className="text-white text-sm">
-                            +1(332) 252 9988
-                        </Link>
-                    </div>
-                    <div className="flex flex-col items-center gap-y-2">
-                        <p className="whitespace-nowrap text-white text-sm">Email Us</p>
-                        <Link href="mailto:sales@customfitboxes.com" target="_blank" className="text-white text-sm">
-                            sales@customfitboxes.com
-                        </Link>
-                    </div>
+                <div className="flex items-center gap-3">
+                    <Link href="tel:8005588047" className="text-base font-medium text-primary hover:text-white px-3 py-2 rounded-lg hidden md:flex items-center gap-2 bg-transparent hover:bg-primary border-2 border-primary transition-all duration-300 ease-in-out">
+                        <FaPhoneVolume size={22} />  800 558 8047
+                    </Link>
+                    <Link href="https://wa.me/+20005588047" className="text-base font-medium text-white hover:text-Wp_Green px-3 py-2 rounded-lg hidden md:flex items-center gap-2 bg-Wp_Green hover:bg-transparent border-2 border-Wp_Green transition-all duration-300 ease-in-out">
+                        <IoLogoWhatsapp size={22} />  WhatsApp Us
+                    </Link>
+                    <button onClick={() => setMblMenu(!mblMenu)} className="text-primary text-2xl md:hidden flex items-center gap-5">
+                        {!mblMenu ? <FaBars /> : <MdClose />}
+                    </button>
+                    <button className="text-2xl text-primary hover:text-prim_hovr relative cursor-pointer">
+                        <span className="text-xs inline-flex w-4.5 h-4.5 rounded-full bg-primary text-white text-center justify-center items-center absolute -right-2 -top-2">0</span>
+                        <BsCart />
+                    </button>
                 </div>
             </div>
-            <div className="container mx-auto md:px-0 px-4 md:flex hidden items-center justify-between mt-3">
+            <div className="container mx-auto px-4 md:flex hidden items-center justify-between bg-white py-2 border border-Wp_border/50 rounded">
                 <nav>
                     <ul ref={navRef} className="flex md:flex-row gap-x-6 lg:gap-x-10 items-center justify-start">
-
                         {links.map((item) => (
-                            <li key={item.label}>
+                            <li key={item.label} className="relative">
 
                                 {/* LINK */}
                                 {item.type === "link" && (
                                     <Link
+                                        onMouseEnter={() => setActiveMenu(null)}
                                         href={item.href}
-                                        className="text-xs xl:text-base text-white flex items-center gap-3 hover:scale-95 duration-300"
+                                        className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-3 hover:scale-95 duration-300"
                                     >
                                         {item.label}
                                     </Link>
@@ -95,87 +95,71 @@ const Header = () => {
                                     <>
                                         <Link href={item.href}
                                             onMouseEnter={() => setActiveMenu(item.label)}
-                                            className="text-xs xl:text-base text-white flex items-center gap-2"
+                                            className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-2 hover:scale-95 duration-300"
                                         >
                                             {item.label} <HiChevronDown />
                                         </Link>
 
                                         {activeMenu === item.label && (
-                                            <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-60 top-full bg-white rounded-lg shadow-lg flex flex-col divide-y divide-title/20 z-[999] ">
+                                            <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-60 top-full bg-white shadow-[0_10px_30px_0_rgba(0,0,0,0.15)] border border-Wp_border/50 border-t-2 border-t-primary p-2.5 flex flex-col gap-1 divide-y divide-[#eee] z-[999] mt-4">
                                                 {item.children?.map((child) => (
                                                     <Link
                                                         key={child.label}
                                                         href={child.href}
-                                                        className="flex items-center gap-x-3 cursor-pointer hover:font-bold text-title/80 hover:text-title py-3 px-3"
+                                                        className="flex items-center gap-x-2.5 hover:text-primary text-desc px-3.5 py-2.5 rounded-sm group"
                                                         onClick={() => setActiveMenu(null)}
                                                     >
-                                                        <span className="text-xs sm:text-sm font-medium"> {child.label}</span>
+                                                        <span className="text-[13px] font-bold text-desc capitalize group-hover:bg-primary group-hover:text-white w-7 h-7 rounded-md flex items-center justify-center bg-primary/10">
+                                                            {child.label[0]}
+                                                        </span>
+                                                        <span className="text-xs sm:text-sm font-medium">{child.label}</span>
                                                     </Link>
                                                 ))}
                                             </div>
                                         )}
                                     </>
                                 )}
-
                                 {item.type === "mega" && (
                                     <>
                                         <Link href={item.href}
                                             onMouseEnter={() => setActiveMenu(item.label)}
-                                            className="text-xs xl:text-base text-white flex items-center gap-2"
+                                            className="text-xs xl:text-sm uppercase font-medium text-decs flex items-center gap-2 hover:scale-95 duration-300"
                                         >
                                             {item.label} <HiChevronDown />
                                         </Link>
-
                                         {activeMenu === item.label && (
-                                            <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-full top-full -mt-4 pt-4 left-0 right-0 z-[999] ">
-                                                <div className="container mx-auto bg-white text-title  rounded-lg shadow-lg px-3 sm:px-10 pb-10 pt-5">
+                                            <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-full top-full pt-4 left-0 right-0 z-[999] ">
+                                                <div className="w-[720px] bg-white shadow-[0_10px_30px_0_rgba(0,0,0,0.15)] p-5 border border-Wp_border/50 border-t-2 border-t-primary bg-[radial-gradient(circle_at_top_left,rgba(55,56,130,0.05),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(55,56,130,0.05),transparent_50%)]">
                                                     {item.children?.map((group) => (
-                                                        <div key={group.group}>
-                                                            <h2 className="text-title text-lg font-semibold">{group.group}</h2>
-
-                                                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mt-10">
+                                                        <div key={group.items}>
+                                                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                                                 {group.items.map((i) => (
                                                                     <Link
                                                                         key={i.label}
                                                                         href={i.href}
-                                                                        className="flex items-center gap-x-3 hover:!border-none cursor-pointer hover:font-bold hover:text-title text-gray-700 h-12 sm:h-14 md:h-16"
+                                                                        className="flex items-center gap-x-2.5 hover:text-primary text-desc bg-transparent hover:bg-primary/5 py-2 px-3 rounded-sm border-b border-[#eee] group"
                                                                         onClick={() => setActiveMenu(null)}
                                                                     >
-                                                                        <Image src={i.icon} alt="icon" width={48} height={48} />
-                                                                        <span className="text-xs sm:text-sm md:text-base font-normal">{i.label}</span>
+                                                                        <span className="text-[13px] font-bold text-desc capitalize group-hover:bg-primary group-hover:text-white w-7 h-7 rounded-md flex items-center justify-center bg-primary/10">
+                                                                            {i.label[0]}
+                                                                        </span>
+                                                                        <span className="text-xs sm:text-sm font-medium">{i.label}</span>
                                                                     </Link>
                                                                 ))}
                                                             </div>
                                                         </div>
                                                     ))}
-
-                                                    {item.footer && (
-                                                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                                                            <Link
-                                                                href={item.footer.href}
-                                                                className="flex items-center gap-x-3 cursor-pointer text-title rounded-lg justify-center px-2 h-12 sm:h-14 md:h-16 bg-zinc-100 hover:scale-95 duration-300"
-                                                                onClick={() => setActiveMenu(null)}
-                                                            >
-                                                                <span className="text-xs sm:text-sm md:text-base font-semibold text-title"> {item.footer.label}</span>
-                                                                <FaChevronRight />
-                                                            </Link>
-                                                        </div>
-                                                    )}
                                                 </div>
                                             </div>
                                         )}
                                     </>
                                 )}
-
                             </li>
                         ))}
                     </ul>
                 </nav>
-                <div className="hidden items-center gap-x-4 lg:flex lg:gap-x-4 md:pb-3">
-                    <Link href="/request-sample-pack" className="text-xs text-center text-white bg-transparent border border-white rounded-md py-2 w-36 lg:w-40">
-                        Request a Sample Pack
-                    </Link>
-                    <Link href="/request-quote" className="text-xs text-center text-white bg-transparent border border-white rounded-md py-2 w-36 lg:w-40">
+                <div className="hidden items-center gap-4 lg:flex">
+                    <Link href="/request-quote" className="text-xs font-semibold text-center text-white bg-primary hover:bg-prim_hovr rounded-lg py-3 px-6 hover:-translate-y-0.5 transition-all ease-in-out duration-300">
                         Request a quote
                     </Link>
                 </div>

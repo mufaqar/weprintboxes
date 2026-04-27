@@ -19,13 +19,13 @@ export default function Home() {
       <JourneySection />
       <WhyChoose />
       <PackagingProcess />
-      <FinishingOptions />
-      <WhoWeAre />
-      <RequestQuote />
       <ScrollContent />
-      <Faqs />
+      {/* <FinishingOptions /> */}
+      {/* <WhoWeAre /> */}
+      <RequestQuote />
+      
       <TestimonialSlider />
-      <CallBack />
+      {/* <CallBack /> */}
     </main>
   );
 }

@@ -1,0 +1,6 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" width="70"  height="70" >
+            <rect x="12" y="8" width="40" height="48" rx="4" stroke="#FFFFFF" stroke-width="2px" fill="none"></rect>
+            <path d="M20 20H44M20 28H44M20 36H36" stroke="#FFFFFF" stroke-width="2px" fill="none"></path>
+            <circle cx="44" cy="44" r="6" stroke="#FFFFFF" stroke-width="2px" fill="none"></circle>
+            <path d="M44 41V44L46 46" stroke="#FFFFFF" stroke-width="2px" fill="none"></path>
+          </svg>

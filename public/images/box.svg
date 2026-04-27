@@ -1,0 +1,5 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" width="70"  height="70" >
+            <path d="M8 20L32 8L56 20L32 32L8 20Z" stroke="#FFFFFF" stroke-width="2px" fill="none"></path>
+            <path d="M8 20V44L32 56V32" stroke="#FFFFFF" stroke-width="2px" fill="none"></path>
+            <path d="M56 20V44L32 56" stroke="#FFFFFF" stroke-width="2px" fill="none"></path>
+          </svg>

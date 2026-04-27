@@ -30,57 +30,56 @@ body {
   font-family: var(--font-poppins);
   color: var(--desc);
 }
-h2 {
-    @apply md:text-[32px] md:leading-none font-bold;
-}
-.scrollDiv {
-  direction: rtl;
+
+.container {
+  @apply max-w-[1162px]
 }
 
-/* Keep content normal */
-.scrollContent {
-  direction: ltr;
+h2 {
+  @apply md:text-[32px] md:leading-none font-bold;
 }
 
 /* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 4px;
+.scrollDiv::-webkit-scrollbar,
+.quote-wrapper::-webkit-scrollbar {
+  width: 8px;
   height: 2px;
 }
 
-::-webkit-scrollbar-track {
-  background: #e9e7e7;
-  border-radius: 100vh;
+.scrollDiv::-webkit-scrollbar-track,
+.quote-wrapper::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--primary);
-  /* primary color */
-  border-radius: 50vh;
+.scrollDiv::-webkit-scrollbar-thumb,
+.quote-wrapper::-webkit-scrollbar-thumb {
+  background: var(--Wp_Green);
 }
 
-.scrollDiv::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+.scrollDiv::-webkit-scrollbar-thumb:hover,
+.quote-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--Wp_Green);
   /* darker on hover */
 }
 
 .scrollContent h2 {
-  @apply text-xl font-semibold text-primary mb-4;
+  @apply md:text-[32px] md:leading-none text-2xl font-extrabold text-primary mb-4;
 }
 
 .scrollContent h3,
 .scrollContent h4,
 .scrollContent h5,
 .scrollContent h6 {
-  @apply text-lg font-semibold mt-3;
+  @apply md:text-[28px] text-xl font-extrabold text-primary mt-3;
 }
 
 .scrollContent p {
-  @apply text-sm mt-3;
+  @apply text-sm mt-3 mb-5;
 }
 
 .scrollContent ul {
-  @apply list-disc mt-10 pl-6 flex flex-col gap-y-5 text-sm;
+  @apply list-none pl-5 mt-5 flex flex-col gap-y-5 text-sm;
 }
 
 .scrollContent a {
@@ -120,9 +119,39 @@ h2 {
   opacity: 1;
   border: 1px solid var(--color-primary)
 }
+
 .why_us p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #253746;
-    margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #253746;
+  margin-bottom: 12px;
+}
+
+.scrollContent ul li {
+  position: relative;
+  padding-left: 25px;
+}
+
+.scrollContent ul li:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--Wp_Green);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.quote-section::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 0;
+  width: 30%;
+  height: 87%;
+  background-color: #eef2ffcf;
+  border-radius: 0 50% 50% 0;
+  transform: translateX(-30%) scaleX(1.5);
+  opacity: .8;
+  z-index: -1;
 }

@@ -4,33 +4,43 @@ import Link from 'next/link'
 const ScrollContent = () => {
     return (
         <section className='py-16'>
-            <div className='container mx-auto md:px-0 px-4 flex md:flex-row flex-col-reverse gap-10 items-center'>
-                <div className='md:w-2/3 w-full'>
-                    <div className='scrollDiv overflow-y-auto pl-3 md:pl-5 h-[480px]'>
+            <div className='container mx-auto px-4 '>
+                <div className='bg-white py-10 px-8 rounded-[15px] shadow-[0_1px_20px_rgb(0,0,0,.09)]'>
+                    <div className='scrollDiv overflow-y-auto px-[18px] h-[500px]'>
                         <div className='scrollContent'>
                             <h2 className=''>
-                                Create Custom Boxes That Elevate Your Brand
+                                Custom Boxes Wholesale Suppliers in the USA
                             </h2>
                             <p className=''>
-                                Looking for the perfect packaging to showcase your brand? At Custom Fit Boxes, we provide tailor-made packaging solutions designed to meet your unique product needs. We offer the ideal packaging solutions regardless of whether you need minimalistic or premium designs.
-                            </p>
-                            <h3 className=''>
-                                Why Are Custom Boxes Essential for Product Marketing?
-                            </h3>
-                            <p>
-                                Using custom packaging designs helps your business stand out and gives your products a unique edge in the market. Custom-printed boxes attract shoppers because they look appealing, making people more likely to buy your products. When customers like what they see, they share their positive experiences with others, helping spread the word about your brand. This natural promotion can boost your brand's reputation and value in the market. There is a wide range of custom printing services to make your packaging look great. Advanced printing machines are used to turn your ideas into reality and ensure your orders are delivered quickly. With high-quality machines, your custom boxes will look exactly how you envision them.
+                                Custom boxes plays a wide role in the retail market and product quality. With all the competition in the retail world, unique packaging today is a key that is required when selling a product to a consumer and when presenting a product to the customer as well as brand awareness. We Print Boxes is a wholesaler supplier of custom boxes in the USA with pride. At We Print Boxes, we manufacture luxury custom boxes at wholesale rates in the USA. Our specialty for custom packaging solutions for many industries is durability, and premium looks. We Print Boxes offers fully customizable packaging solutions at wholesale rates to any type of business ranging between big and small.
                             </p>
                             <p>
-                                By buying custom boxes wholesale, you can save money and invest in other parts of your business. Attractive packaging catches customers' attention in stores, leading to more loyal customers and higher sales.
+                                So are you starting your own venture? Or selling your homemade goods? Or operating a brand at the enterprise level? We have custom boxes in bulk at the most competitive wholesale prices. Whether you require retail display boxes, or need to ship the product in the durable shipping boxes or the luxurious packaging, we have a large variety of the styles, sizes, and finishes available to create a touch of class and pack it safely on its way.
+                            </p>
+                            <h2 className=''>
+                                Customization of Custom Boxes with Logo Wholesale
+                            </h2>
+                            <p>
+                                Logos are needed in custom boxes as they are needed in the identity of brands and uniqueness of products. With the assistance of premium additional choices such as embossing, debossing, foil stamping, soft-touch lamination, and die-cut windows, our facility of custom packaging is provided by We Print Boxes at wholesale prices. Our boxes fit like a glove to create an improved presentation and be unforgettable during the unboxing. Purchasing bulk gets you affordable prices and enhances brand awareness. We can assist you to make your brand bigger, with beautiful, cost effective packaging.
+                            </p>
+                            <h2>
+                                The Significance of Custom Packaging in Branding Protection
+                            </h2>
+                            <p>
+                                Packaging serves more purposes than just protecting goods; it also enhances a company's reputation and attracts clients. Custom boxes spread your message, differentiate your brand, and promote customer loyalty. Packaging that is visually appealing attracts attention and encourages people to try your product. Although quality is important, customers can't experience your product until they see it.
+                            </p>
+                            <h2>
+                                Enhance your brands' value with We Print Boxes
+                            </h2>
+                            <p>
+                                In today's market, custom packaging serves more than just protecting your products. Packaging plays three major roles: it helps clients recognize brands, engages them, and boosts the worth of products. Custom boxes from We Print Boxes provide the following objectives:
                             </p>
                             <ul>
                                 <li>
-                                    <b>Consultation:</b> Share your packaging vision and requirements.
+                                    <b>Brand Recognition:</b> Unique Branding Elements Include Custom Boxes with Logos Together with Special Colors and Graphics.
                                 </li>
                                 <li>
-                                    <Link href="#">
-                                        Custom CBD Packaging
-                                    </Link>
+                                    <b> Product Protection:</b> Increased protection with perfect-sizing boxes designed specifically for each product.
                                 </li>
                                 <li>
                                     <Link href="#">
@@ -64,11 +74,6 @@ const ScrollContent = () => {
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div className='md:w-1/3 w-full'>
-                    <div className='h-[480px] rounded-md overflow-hidden'>
-                        <Image src="/images/contenimg.png" alt='contenimg' width={504} height={504} className='w-full object-cover object-center scale-105' />
                     </div>
                 </div>
             </div>

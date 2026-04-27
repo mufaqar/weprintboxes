@@ -4,173 +4,50 @@ import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <footer className='border-t border-zinc-300 md:pt-5'>
-            <div className='container mx-auto md:px-0 px-4 grid md:grid-cols-4 grid-cols-1 gap-y-14 border-b border-zinc-200 pb-14 pt-10 md:gap-y-0 gap-x-0 md:gap-x-5 lg:gap-x-8'>
-                <div className='md:col-span-1'>
-                    <Link href="/" className="inline-flex">
-                        <Image src="/images/logofooter.png" alt="logo" width={160} height={70} />
+        <footer className='bg-primary'>
+            <div className='container mx-auto md:px-0 px-4 '>
+                <div className='max-w-[854px] mx-auto text-center'>
+                    <Link href="/" className="">
+                        <Image src="/images/logo.png" alt="logo" width={160} height={70} className='object-contain flex max-w-[160px] mx-auto h-fit bg-white py-3 px-5 rounded-b-md' />
                     </Link>
-                    <div className='flex flex-row md:flex-col flex-wrap sm:flex-nowrap gap-y-10 sm:gap-y-0 gap-x-10 md:gap-y-10 mt-10'>
-                        <ul className='flex flex-row md:flex-col flex-wrap sm:flex-nowrap gap-y-10 sm:gap-y-0 gap-x-10 md:gap-y-10 font-normal'>
-                            <li className='flex flex-col items-start gap-y-1 -mt-3'>
-                                <span className='whitespace-nowrap font-bold'>Phone</span>
-                                <Link href="tel:+1(332)2529988" className='text-title text-[15px] font-medium'>
-                                    +1(332) 252 9988
-                                </Link>
-                            </li>
-                            <li className='flex flex-col items-start gap-y-1 -mt-3'>
-                                <span className='whitespace-nowrap font-bold'>Email Us</span>
-                                <Link href="mailto:sales@customfitboxes.com" className='text-title text-[15px] font-medium'>
-                                    sales@customfitboxes.com
-                                </Link>
-                            </li>
-                        </ul>
-                        <ul className='flex items-center gap-x-4  md:items-start justify-center sm:!justify-start w-full md:w-auto'>
-                            <li>
-                                <Link href="#" className='text-2xl text-primary inline-flex'>
-                                    <FaLinkedin />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='text-2xl text-primary inline-flex'>
-                                    <FaInstagram />
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='text-2xl text-primary inline-flex'>
-                                    <FaFacebook />
-                                </Link>
-                            </li>
-                        </ul>
+                    <p className='text-sm font-normal text-white my-6'>
+                        Turn every unboxing into a memorable moment with our eye-catching custom printed boxes, specially made only for you!
+                    </p>
+                    <ul className='py-[18px] flex flex-wrap gap-[30px] justify-center items-center border-y border-white/20'>
+                        <li>
+                            <Link href="/about-us" className='text-sm font-semibold text-white hover:text-[#55daa4] hover:underline'>
+                                About Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/blog" className='text-sm font-semibold text-white hover:text-[#55daa4] hover:underline'>
+                                Blog
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/privacy-policy/" className='text-sm font-semibold text-white hover:text-[#55daa4] hover:underline'>
+                                Privacy Policy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/refund-policy/" className='text-sm font-semibold text-white hover:text-[#55daa4] hover:underline'>
+                                Refund Policy
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/terms-conditions/" className='text-sm font-semibold text-white hover:text-[#55daa4] hover:underline'>
+                                Terms & Conditions
+                            </Link>
+                        </li>
+                    </ul>
+                    <div className='py-6'>
+                        <Image src="/images/payment.png" alt='payment' width={426} height={65} className='object-contain flex max-w-[438px] mx-auto h-fit bg-white py-1 px-4 rounded-md' />
                     </div>
+                    <p className='text-white'>
+                        WE PRINT BOXES © 2026 All rights reserved
+                    </p>
                 </div>
-                <div className='md:col-span-3 grid md:grid-cols-4 grid-cols-1 gap-y-14 md:gap-y-0 gap-x-0 md:gap-x-5 lg:gap-x-8'>
-                    <div className=''>
-                        <h6 className='font-semibold text-xl text-title sm:text-2xl'>Explore</h6>
-                        <ul className='mt-8 flex flex-col gap-y-5'>
-                            <li>
-                                <Link href="/why-us" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Why Us
-                                </Link>
-                            </li>
 
-                            <li>
-                                <Link href="/about-us" className='font-normal cursor-pointer text-title hover:underline'>
-                                    About Us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/blog" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Blogs
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/request-sample-pack" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Request Sample Pack
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/request-quote" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Get A Quote
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className=''>
-                        <h6 className='font-semibold text-xl text-title sm:text-2xl'>Solutions</h6>
-                        <ul className='mt-8 flex flex-col gap-y-5'>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Rigid Boxes
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    CBD Boxes
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Mailer Boxes
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Cosmetic Boxes
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Soap Boxes
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className=''>
-                        <h6 className='font-semibold text-xl text-title sm:text-2xl'>Products</h6>
-                        <ul className='mt-8 flex flex-col gap-y-5'>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Candle Boxes
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Retail Boxes
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Food Boxes
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Bakery Boxes
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Apparel Boxes
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className=''>
-                        <h6 className='font-semibold text-xl text-title sm:text-2xl'>Legals</h6>
-                        <ul className='mt-8 flex flex-col gap-y-5'>
-                            <li>
-                                <Link href="/privacy-policy" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Privacy Policy
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link href="/terms-&-conditions" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Terms & Conditions
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/terms-&-conditions" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Return Policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact-us" className='font-normal cursor-pointer text-title hover:underline'>
-                                    Contact Us
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div className='container mx-auto md:px-0 px-4 flex flex-col items-center justify-between gap-y-3 py-12 md:flex-row md:gap-y-0 md:gap-x-4'>
-                <p className='text-sm sm:text-base text-title font-normal'>© 2024 Customfitboxes.All rights reserved.</p>
-                <div className='md:w-60'>
-                    <Image src="/images/paymentImg.jpg" alt='paymentImg' width={897} height={96} />
-                </div>
             </div>
         </footer>
     )

@@ -43,7 +43,7 @@ const Footer = () => {
                     <div className='py-6'>
                         <Image src="/images/payment.png" alt='payment' width={426} height={65} className='object-contain flex max-w-[438px] mx-auto h-fit bg-white py-1 px-4 rounded-md' />
                     </div>
-                    <p className='text-white'>
+                    <p className='text-xs text-white'>
                         WE PRINT BOXES © 2026 All rights reserved
                     </p>
                 </div>

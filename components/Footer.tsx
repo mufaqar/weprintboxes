@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaFacebook, FaFacebookSquare, FaInstagram, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
+import { FaFacebook, FaInstagram } from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -42,11 +42,11 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className='py-6'>
-                    <Image src="/images/payment.png" alt='payment' width={426} height={65} className='object-contain flex max-w-[438px] mx-auto h-fit bg-white py-1 px-4 rounded-md' />
+                    <Image src="/images/payment.png" alt='payment' width={426} height={65} className='object-contain flex max-w-[438px] mx-auto h-fit bg-white py-1 px-1.5 rounded-md' />
                 </div>
             </div>
-            <div className='bg-white py-[18px] border-y border-white/20'>
-                <div className='container mx-auto px-4 flex md:flex-row flex-col justify-between items-center'>
+            <div className='bg-white py-3 border-y border-white/20'>
+                <div className='container mx-auto px-3 flex md:flex-row flex-col justify-between items-center'>
                     <ul className='flex flex-wrap gap-[30px] justify-start items-center'>
                         <li>
                             <Link href="tel:8005588047" className='flex items-center gap-1.5 text-sm text-desc hover:text-Wp_Green'>
@@ -70,12 +70,12 @@ const Footer = () => {
                     <ul className='flex flex-wrap gap-5 md:justify-end items-center'>
                         <li>
                             <Link href="#" className='text-lg w-[28px] h-[28px] rounded bg-[#1877f2] text-white flex items-center justify-center'>
-                                <FaFacebookSquare />
+                                <FaFacebook />
                             </Link>
                         </li>
                         <li>
                             <Link href="#" className='text-lg w-[28px] h-[28px] rounded bg-[#e4405f] text-white flex items-center justify-center'>
-                                <FaInstagramSquare />
+                                <FaInstagram />
                             </Link>
                         </li>
                     </ul>

@@ -3,7 +3,7 @@ import { NavigationItem, Navlinks } from "@/data/NavLinks";
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react";
-import { FaBars, FaChevronRight, FaPhoneAlt, FaSearch } from "react-icons/fa"
+import { FaBars, FaSearch } from "react-icons/fa"
 import { HiChevronDown } from "react-icons/hi"
 import { MdClose } from "react-icons/md";
 import { MblMenu } from "./MblMenu";
@@ -17,6 +17,7 @@ const Header = () => {
     const [mblMenu, setMblMenu] = useState(false);
     const [activeMenu, setActiveMenu] = useState<string | null>(null);
     const navRef = useRef<HTMLUListElement>(null);
+    
     useEffect(() => {
         const handler = (e: MouseEvent) => {
             if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -27,6 +28,7 @@ const Header = () => {
         document.addEventListener("mousedown", handler);
         return () => document.removeEventListener("mousedown", handler);
     }, []);
+    
     return (
         <header className="bg-background relative">
             <div className="md:hidden flex gap-2 items-center justify-center bg-Wp_Green">
@@ -42,7 +44,6 @@ const Header = () => {
                     <Link href="/" className="inline-flex">
                         <Image src="/images/logo.png" alt="logo" width={162} height={61} className="md:w-[162px] w-[90px] md:h-auto" />
                     </Link>
-
                 </div>
                 {mblMenu && <MblMenu setMblMenu={setMblMenu} />}
                 <div className="md:block hidden w-80 xl:w-125">
@@ -83,7 +84,7 @@ const Header = () => {
                                 {item.type === "link" && (
                                     <Link
                                         onMouseEnter={() => setActiveMenu(null)}
-                                        href={item.href}
+                                        href={item.slug || "#"}
                                         className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-3 hover:scale-95 duration-300"
                                     >
                                         {item.label}
@@ -93,7 +94,8 @@ const Header = () => {
                                 {/* DROPDOWN */}
                                 {item.type === "dropdown" && (
                                     <>
-                                        <Link href={item.href}
+                                        <Link 
+                                            href={item.slug || "#"}
                                             onMouseEnter={() => setActiveMenu(item.label)}
                                             className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-2 hover:scale-95 duration-300"
                                         >
@@ -105,7 +107,7 @@ const Header = () => {
                                                 {item.children?.map((child) => (
                                                     <Link
                                                         key={child.label}
-                                                        href={child.href}
+                                                        href={child.slug}
                                                         className="flex items-center gap-x-2.5 hover:text-primary text-desc px-3.5 py-2.5 rounded-sm group"
                                                         onClick={() => setActiveMenu(null)}
                                                     >
@@ -119,36 +121,36 @@ const Header = () => {
                                         )}
                                     </>
                                 )}
+                                
+                                {/* MEGA MENU */}
                                 {item.type === "mega" && (
                                     <>
-                                        <Link href={item.href}
+                                        <Link 
+                                            href={item.slug || "#"}
                                             onMouseEnter={() => setActiveMenu(item.label)}
-                                            className="text-xs xl:text-sm uppercase font-medium text-decs flex items-center gap-2 hover:scale-95 duration-300"
+                                            className="text-xs xl:text-sm uppercase font-medium text-desc flex items-center gap-2 hover:scale-95 duration-300"
                                         >
                                             {item.label} <HiChevronDown />
                                         </Link>
+                                        
                                         {activeMenu === item.label && (
-                                            <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-full top-full pt-4 left-0 right-0 z-[999] ">
+                                            <div onMouseLeave={() => setActiveMenu(null)} className="absolute w-full top-full pt-4 left-0 right-0 z-[999]">
                                                 <div className="w-[720px] bg-white shadow-[0_10px_30px_0_rgba(0,0,0,0.15)] p-5 border border-Wp_border/50 border-t-2 border-t-primary bg-[radial-gradient(circle_at_top_left,rgba(55,56,130,0.05),transparent_50%),radial-gradient(circle_at_bottom_right,rgba(55,56,130,0.05),transparent_50%)]">
-                                                    {item.children?.map((group) => (
-                                                        <div key={group.items}>
-                                                            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                                                                {group.items.map((i) => (
-                                                                    <Link
-                                                                        key={i.label}
-                                                                        href={i.href}
-                                                                        className="flex items-center gap-x-2.5 hover:text-primary text-desc bg-transparent hover:bg-primary/5 py-2 px-3 rounded-sm border-b border-[#eee] group"
-                                                                        onClick={() => setActiveMenu(null)}
-                                                                    >
-                                                                        <span className="text-[13px] font-bold text-desc capitalize group-hover:bg-primary group-hover:text-white w-7 h-7 rounded-md flex items-center justify-center bg-primary/10">
-                                                                            {i.label[0]}
-                                                                        </span>
-                                                                        <span className="text-xs sm:text-sm font-medium">{i.label}</span>
-                                                                    </Link>
-                                                                ))}
-                                                            </div>
-                                                        </div>
-                                                    ))}
+                                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                                        {item.children?.flatMap(group => group.items).map((i) => (
+                                                            <Link
+                                                                key={i.label}
+                                                                href={i.slug}
+                                                                className="flex items-center gap-x-2.5 hover:text-primary text-desc bg-transparent hover:bg-primary/5 py-2 px-3 rounded-sm border-b border-[#eee] group"
+                                                                onClick={() => setActiveMenu(null)}
+                                                            >
+                                                                <span className="text-[13px] font-bold text-desc capitalize group-hover:bg-primary group-hover:text-white w-7 h-7 rounded-md flex items-center justify-center bg-primary/10">
+                                                                    {i.label[0]}
+                                                                </span>
+                                                                <span className="text-xs sm:text-sm font-medium">{i.label}</span>
+                                                            </Link>
+                                                        ))}
+                                                    </div>
                                                 </div>
                                             </div>
                                         )}

@@ -55,11 +55,11 @@ const Faqs = () => {
     }
 
     return (
-        <div className="quote-wrapper overflow-y-auto px-[18px] h-[500px]">
+        <div className="quote-wrapper overflow-y-auto md:px-[18px] h-[500px]">
             {faqsData.map((faq, index) => (
                 <div
                     key={index}
-                    className={`overflow-hidden flex items-start gap-5 p-5 pb-0`}>
+                    className={`overflow-hidden flex items-start gap-5 md:px-5 px-0 pt-5 pb-0`}>
                     <span className={`${activeIndex === index ? "bg-Wp_Green" : "bg-primary"} min-w-9 min-h-9 text-white rounded-full flex items-center justify-center cursor-pointer`}>
                         {activeIndex === index ? <FaMinus /> : <FaPlus />}
                     </span>

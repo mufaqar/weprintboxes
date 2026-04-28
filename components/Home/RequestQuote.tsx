@@ -12,9 +12,9 @@ const RequestQuote = () => {
                     Get instant pricing, expert design support, and answers to all your packaging queries in one place.
                 </p>
             </div>
-            <div className='max-w-[1012px] mx-auto md:px-0 px-4 mt-10 flex md:flex-row flex-col gap-9'>
+            <div className='max-w-[1012px] mx-auto px-4 mt-10 flex md:flex-row flex-col gap-9'>
                 <div className='md:w-1/2 w-full'>
-                    <form className='grid md:grid-cols-3 grid-cols-1 md:gap-4 md:pt-[32px] md:px-[35px] md:pb-7 p-6 bg-Wp_Green rounded-[25px]'>
+                    <form className='grid md:grid-cols-3 grid-cols-1 gap-4 md:pt-[32px] md:px-[35px] md:pb-7 p-6 bg-Wp_Green rounded-[25px]'>
                         <div>
                             <input
                                 type='text'

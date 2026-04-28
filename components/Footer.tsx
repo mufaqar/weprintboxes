@@ -14,7 +14,7 @@ const Footer = () => {
                         Turn every unboxing into a memorable moment with our eye-catching custom printed boxes, specially made only for you!
                     </p>
                 </div>
-                <ul className='py-[18px] flex flex-wrap gap-[30px] justify-center items-center border-y border-white/20'>
+                <ul className='py-[18px] flex flex-wrap md:gap-[30px] gap-4 justify-center items-center border-y border-white/20'>
                     <li>
                         <Link href="/about-us" className='text-sm font-semibold text-white hover:text-[#55daa4] hover:underline'>
                             About Us
@@ -42,12 +42,12 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className='py-6'>
-                    <Image src="/images/payment.png" alt='payment' width={426} height={65} className='object-contain flex max-w-[438px] mx-auto h-fit bg-white py-1 px-1.5 rounded-md' />
+                    <Image src="/images/payment.png" alt='payment' width={426} height={65} className='object-contain flex max-w-[438px] w-full mx-auto h-fit bg-white py-1 px-1.5 rounded-md' />
                 </div>
             </div>
             <div className='bg-white py-3 border-y border-white/20'>
-                <div className='container mx-auto px-3 flex md:flex-row flex-col justify-between items-center'>
-                    <ul className='flex flex-wrap gap-[30px] justify-start items-center'>
+                <div className='container mx-auto px-3 flex md:flex-row flex-col gap-5 justify-between items-center'>
+                    <ul className='flex flex-wrap md:gap-[30px] gap-4 justify-start items-center'>
                         <li>
                             <Link href="tel:8005588047" className='flex items-center gap-1.5 text-sm text-desc hover:text-Wp_Green'>
                                 <Image src="/images/telephone.svg" alt='telephone' width={20} height={20} />
@@ -67,7 +67,7 @@ const Footer = () => {
                             </span>
                         </li>
                     </ul>
-                    <ul className='flex flex-wrap gap-5 md:justify-end items-center'>
+                    <ul className='flex flex-wrap gap-5 md:justify-end justify-start items-center'>
                         <li>
                             <Link href="#" className='text-lg w-[28px] h-[28px] rounded bg-[#1877f2] text-white flex items-center justify-center'>
                                 <FaFacebook />

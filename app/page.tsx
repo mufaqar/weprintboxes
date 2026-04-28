@@ -23,7 +23,6 @@ export default function Home() {
       {/* <FinishingOptions /> */}
       {/* <WhoWeAre /> */}
       <RequestQuote />
-      
       <TestimonialSlider />
       {/* <CallBack /> */}
     </main>

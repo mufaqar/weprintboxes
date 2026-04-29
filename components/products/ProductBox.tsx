@@ -1,43 +1,24 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
-interface Props {
-  data: any;
-  view: "grid" | "list";
-}
-
-const ProductBox = ({ data, view }: Props) => {
-  if (view === "list") {
-    return (
-      <div className='flex md:flex-row flex-col items-center rounded-3xl overflow-hidden bg-[#f5f5f5] hover:drop-shadow-md duration-300'>
-        <div className='md:w-1/5 w-full rounded-md h-60 flex items-center justify-center bg-background overflow-hidden'>
-          <Image src="/images/essential-oil.jpg" alt='feature' width={310} height={384} className='w-full h-full object-cover object-center' />
-        </div>
-        <div className='md:w-4/5 w-full px-6 py-8 flex flex-col gap-y-4'>
-          <Link href="/product/corrugated-mailer-boxes" className='md:text-base font-semibold text-title'>
-            Corrugated Mailer Boxes
-          </Link>
-          <p className='text-sm text-desc'>
-            Custom corrugated mailer boxes are lightweight yet strong shipping boxes, equipped with fluted cardboard that provides additional protection. They are entirely customizable with your logo, colors, and design, so you can use them to ship products through the mail smoothly, start subscriptions, brand opportunities when they reach the customer, and so on.
-          </p>
-        </div>
-      </div>
-    );
-  }
-
+const ProductBox = ({ data }: any) => {
   return (
-    <div className='rounded-3xl overflow-hidden bg-[#f5f5f5] hover:drop-shadow-md duration-300'>
-      <div className='rounded-md flex items-center justify-center h-92 lg:h-96'>
-        <Image src="/images/essential-oil.jpg" alt='feature' width={310} height={384} className='w-full h-full object-cover object-center' />
-      </div>
-      <div className='px-6 py-8 flex flex-col gap-y-4'>
-        <Link href="/product/corrugated-mailer-boxes" className='md:text-base font-semibold text-center text-title flex w-full justify-center items-center'>
-          Corrugated Mailer Boxes
-        </Link>
+    <div className='px-2 group transition-all duration-400 ease-[cubic-bezier(.175,.885,.32,1.275)]'>
+      <div className='rounded-[20px] overflow-hidden bg-white p-5 border border-Wp_border shadow-[0_15px_30px_rgb(56,56,130,0.05)] hover:shadow-[0_15px_30px_rgb(56,56,130,.15)] relative before:content-[""] before:absolute before:w-full before:h-1 before:bottom-0 before:rounded-b-xl before:left-0 before:right-0 before:bg-gradient-to-r before:from-primary before:to-Wp_Green before:scale-x-0 group-hover:before:scale-x-100 before:transition-all before:duration-400'>
+        <div className='rounded-[20px]'>
+          <Image src="/images/pro1.jpg" alt='feature' width={229} height={234} className='w-full rounded-[20px] group-hover:scale-105 transition-all duration-400 ease-[cubic-bezier(.175,.885,.32,1.275)]' />
+        </div>
+        <div className='pt-2.5'>
+          <Link href="/product/corrugated-mailer-boxes" className='text-lg md:text-base lg:text-lg font-semibold text-center text-primary group-hover:text-Wp_Green flex w-full justify-center items-center'>
+            Candle Boxes
+          </Link>
+        </div>
+        <button className='text-xs font-semibold text-center uppercase text-primary hover:text-white bg-transparent hover:bg-primary border-2 border-primary rounded-lg py-2.5 px-6 flex w-fit mx-auto mt-2.5 hover:-translate-y-0.5 transition-all ease-in-out duration-300'>
+          Get a Quote
+        </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ProductBox;

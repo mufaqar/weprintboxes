@@ -2,11 +2,12 @@ import { MdOutlineCloudUpload } from 'react-icons/md'
 import BreadCrumb from '../BreadCrumb'
 import ProductGallery from './ProductGallery'
 import { FaArrowRight, FaShoppingCart } from 'react-icons/fa'
+import Image from 'next/image'
 
 const ProBanner = ({ data }: any) => {
     return (
         <section className='py-10 bg-background'>
-            <div className='container mx-auto md:px-0 px-4 grid md:grid-cols-2 grid-cols-1 gap-10'>
+            <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-10'>
                 <ProductGallery />
                 <div>
                     <div className='bg-white px-4 py-5 rounded-[18px]'>
@@ -149,8 +150,8 @@ const ProBanner = ({ data }: any) => {
                             </div>
                         </form>
                     </div>
-                    <div className='border-[#1c621a33] rounded-2xl p-1.25 mt-2 flex items-center shadow-[0_6px_25px_-8px_rgb(55,56,130,0.15)]'>
-                        <div className='flex gap-2 items-center py-1.5 px-4 bg-[linear-gradient(135deg,rgb(182_182_205/16%)_0%,rgb(70_184_140/.02)_100%)] rounded-l-2xl'>
+                    <div className='w-full border-[#1c621a33] rounded-2xl p-1.25 mt-2 flex items-center shadow-[0_6px_25px_-8px_rgb(55,56,130,0.15)]'>
+                        <div className='w-2/3 flex gap-2 items-center py-1.5 px-4 bg-[linear-gradient(135deg,rgb(182_182_205/16%)_0%,rgb(70_184_140/.02)_100%)] rounded-l-2xl'>
                             <span className='text-[10px] font-semibold text-primary/70 uppercase'>
                                 starting from
                             </span>
@@ -159,12 +160,23 @@ const ProBanner = ({ data }: any) => {
                                 0.10</span>
                             <sup className='text-[11px] font-medium text-primary/50'>/ unit</sup>
                         </div>
-                        <div>
-                            <button className='text-[13px] font-semibold text-white uppercase bg-primary hover:bg-prim_hovr px-4 py-2 flex items-center gap-2 rounded-[14px]'>
-                                <FaShoppingCart />  Add to Cart <FaArrowRight />
+                        <div className='w-[192px]'>
+                            <button className='text-[13px] font-semibold text-white uppercase bg-primary hover:bg-prim_hovr px-4 py-2 flex items-center justify-between gap-2 rounded-[14px] group'>
+                                <span className='min-w-[26px] min-h-[26px] bg-white/30 group-hover:scale-105 rounded-full flex items-center justify-center'>
+                                    <FaShoppingCart size={14} />
+                                </span>  Add to Cart
+                                <span className='min-w-[26px] min-h-[26px] bg-white/30 group-hover:scale-105 rounded-full flex items-center justify-center'>
+                                    <FaArrowRight />
+                                </span>
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-10'>
+                <div>
+                    <Image src="/images/google-review.png" alt="google-review" width={271} height={39} className="py-3.5 px-2.5 rounded-[14px] bg-white mb-2 shadow-[0_6px_20px_rgb(0,0,0,0.05)]" />
+                    <Image src="/images/trustpoliot.png" alt="trustpoliot" width={271} height={39} className="py-3.5 px-2.5 rounded-[14px] bg-white mb-2 shadow-[0_6px_20px_rgb(0,0,0,0.05)]" />
                 </div>
             </div>
         </section>

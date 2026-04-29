@@ -36,8 +36,6 @@ export default function ProductGallery() {
 
     return (
         <div className="flex gap-4 h-full">
-
-            {/* Thumbnails */}
             <div className="md:w-1/5 flex flex-col gap-3">
                 {images.map((img, index) => (
                     <Image
@@ -47,14 +45,12 @@ export default function ProductGallery() {
                         width={111}
                         height={123}
                         onClick={() => sliderRef.current.slickGoTo(index)}
-                        className={`w-full h-full object-cover rounded-md cursor-pointer border-2 transition
+                        className={`w-[75px] h-auto object-cover rounded-md cursor-pointer border transition
               ${activeIndex === index ? "border-primary" : "border-transparent"}
             `}
                     />
                 ))}
             </div>
-
-            {/* Main Slider */}
             <div className="relative md:w-4/5 z-1">
                 <Slider ref={sliderRef} {...settings}>
                     {images.map((img, index) => (
@@ -73,14 +69,14 @@ export default function ProductGallery() {
                 {/* Custom Buttons */}
                 <button
                     onClick={goPrev}
-                    className="absolute top-1/2 -translate-y-1/2 left-4 bg-black/50 text-white w-[42px] h-[43px] rounded-full flex items-center justify-center hover:scale-110 transition"
+                    className="absolute top-1/2 -translate-y-1/2 left-4 bg-primary text-white w-[42px] h-[43px] rounded-full flex items-center justify-center hover:scale-110 transition"
                 >
                     <FaChevronLeft />
                 </button>
 
                 <button
                     onClick={goNext}
-                    className="absolute top-1/2 -translate-y-1/2 right-4 bg-black/50 text-white w-[42px] h-[43px] rounded-full flex items-center justify-center hover:scale-110 transition"
+                    className="absolute top-1/2 -translate-y-1/2 right-4 bg-primary text-white w-[42px] h-[43px] rounded-full flex items-center justify-center hover:scale-110 transition"
                 >
                     <FaChevronRight />
                 </button>

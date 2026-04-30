@@ -2,11 +2,10 @@ import { MdOutlineCloudUpload } from 'react-icons/md'
 import BreadCrumb from '../BreadCrumb'
 import ProductGallery from './ProductGallery'
 import { FaArrowRight, FaShoppingCart } from 'react-icons/fa'
-import Image from 'next/image'
 
 const ProBanner = ({ data }: any) => {
     return (
-        <section className='py-10 bg-background'>
+        <section className='pt-10 bg-background'>
             <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-10'>
                 <ProductGallery />
                 <div>
@@ -28,35 +27,35 @@ const ProBanner = ({ data }: any) => {
                                     type='text'
                                     name='name'
                                     placeholder='Full Name'
-                                    className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='tel'
                                     name='phone'
                                     placeholder='Phone Number'
-                                    className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='email'
                                     name='email'
                                     placeholder='Email Address'
-                                    className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='number'
                                     name='length'
                                     placeholder='Length'
-                                    className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <input
                                     type='number'
                                     name='width'
                                     placeholder='Width'
-                                    className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
 
                             </div>
                             <div>
@@ -64,12 +63,12 @@ const ProBanner = ({ data }: any) => {
                                     type='number'
                                     name='depth'
                                     placeholder='Depth'
-                                    className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                    className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                             </div>
                             <div>
                                 <select
                                     name='unit'
-                                    className="text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none">
+                                    className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                     <option>Unit</option>
                                     <option>Inches</option>
                                     <option>CM</option>
@@ -79,7 +78,7 @@ const ProBanner = ({ data }: any) => {
                             <div>
                                 <select
                                     name="material"
-                                    className="text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none">
+                                    className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                     <option>Material</option>
                                     <option>Kraft</option>
                                     <option>Cardboard</option>
@@ -88,7 +87,7 @@ const ProBanner = ({ data }: any) => {
                             </div>
                             <div>
                                 <select name="stock"
-                                    className="text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none">
+                                    className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                     <option>Stock</option>
                                     <option>12pt</option>
                                     <option>14pt</option>
@@ -102,7 +101,7 @@ const ProBanner = ({ data }: any) => {
                             <div className="md:col-span-3 grid md:grid-cols-2 grid-cols-1 gap-y-2.5 gap-x-3.75">
                                 <div>
                                     <select name="printing"
-                                        className="text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none">
+                                        className="text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none">
                                         <option>Printing</option>
                                         <option>1 Color</option>
                                         <option>2 Color</option>
@@ -116,21 +115,21 @@ const ProBanner = ({ data }: any) => {
                                         type='number'
                                         name='quantity'
                                         placeholder='Quantity'
-                                        className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none' />
+                                        className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                                 </div>
                             </div>
                             <div className="md:col-span-3 grid md:grid-cols-2 grid-cols-1 gap-y-2.5 gap-x-3.75">
                                 <textarea name="message"
                                     placeholder='Additional Information'
-                                    className='h-full text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none'></textarea>
+                                    className='h-full text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none'></textarea>
 
                                 <div className="flex flex-col gap-y-2.5 gap-x-3.75">
                                     <div className="w-full">
-                                        <label className="flex gap-1.5 text-white text-[15px] font-medium items-center justify-center py-2.5 px-4 border-dashed border-2 border-[#ddddddb8] rounded-sm">
+                                        <label className="flex gap-1.5 text-white text-[15px] leading-none font-medium items-center justify-center py-2 px-4 border-dashed border-2 border-[#ddddddb8] rounded-sm">
                                             <MdOutlineCloudUpload size={20} />
                                             <span>Upload design</span>
                                             <input type="file"
-                                                className="hidden text-[15px] font-normal text-primary placeholder:text-desc bg-white border-2 border-transparent rounded-xl py-2.5 px-4 w-full focus:border-primary outline-none" />
+                                                className="hidden text-[15px] leading-none font-normal text-primary placeholder:text-desc bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none" />
                                         </label>
                                     </div>
                                     <div className="relative self-baseline w-full">
@@ -138,7 +137,7 @@ const ProBanner = ({ data }: any) => {
                                             type='number'
                                             name='answer'
                                             placeholder='Captcha'
-                                            className='text-[15px] font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
+                                            className='text-[15px] leading-none font-normal text-primary placeholder:text-primary bg-white border-2 border-transparent rounded-xl py-2 px-4 w-full focus:border-primary outline-none' />
                                         <span className="absolute right-0 bottom-0 py-1 px-2 bg-primary text-white text-lg rounded-md">1+6</span>
                                     </div>
                                     <div className=''>
@@ -160,7 +159,7 @@ const ProBanner = ({ data }: any) => {
                                 0.10</span>
                             <sup className='text-[11px] font-medium text-primary/50'>/ unit</sup>
                         </div>
-                        <div className='w-[192px]'>
+                        <div className='w-[195px]'>
                             <button className='text-[13px] font-semibold text-white uppercase bg-primary hover:bg-prim_hovr px-4 py-2 flex items-center justify-between gap-2 rounded-[14px] group'>
                                 <span className='min-w-[26px] min-h-[26px] bg-white/30 group-hover:scale-105 rounded-full flex items-center justify-center'>
                                     <FaShoppingCart size={14} />
@@ -171,12 +170,6 @@ const ProBanner = ({ data }: any) => {
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-10'>
-                <div>
-                    <Image src="/images/google-review.png" alt="google-review" width={271} height={39} className="py-3.5 px-2.5 rounded-[14px] bg-white mb-2 shadow-[0_6px_20px_rgb(0,0,0,0.05)]" />
-                    <Image src="/images/trustpoliot.png" alt="trustpoliot" width={271} height={39} className="py-3.5 px-2.5 rounded-[14px] bg-white mb-2 shadow-[0_6px_20px_rgb(0,0,0,0.05)]" />
                 </div>
             </div>
         </section>

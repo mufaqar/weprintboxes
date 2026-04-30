@@ -3,6 +3,7 @@ import ScrollContent from "@/components/Home/ScrollContent";
 import CTA from "@/components/products/CTA";
 import Feature from "@/components/products/Feature";
 import ProBanner from "@/components/products/ProBanner";
+import ProTabs from "@/components/products/ProTabs";
 import RelatedPRoducts from "@/components/products/RelatedPRoducts";
 import { notFound } from "next/navigation";
 
@@ -29,13 +30,11 @@ export default async function ProductPage({ params }: any) {
     if (!product) return notFound();
 
     return (
-        <main>
+        <main className="bg-background">
             <ProBanner data={product} />
             <Feature />
-            <ScrollContent />
-            <Faqs />
+            <ProTabs />
             <RelatedPRoducts />
-            <CTA />
         </main>
     );
 }

@@ -35,8 +35,8 @@ export default function ProductGallery() {
     };
 
     return (
-        <div className="flex gap-4 h-full">
-            <div className="md:w-1/5 flex flex-col gap-3">
+        <div className="flex gap-4 h-fit overflow-hidden">
+            <div className="md:w-1/5 flex flex-col gap-3 max-h-[526px] overscroll-y-auto">
                 {images.map((img, index) => (
                     <Image
                         key={index}
@@ -58,8 +58,8 @@ export default function ProductGallery() {
                             <Image
                                 src={img}
                                 alt="feature"
-                                width={600}
-                                height={600}
+                                width={800}
+                                height={800}
                                 className="w-full h-full object-cover rounded-lg bg-[#f5f5f5]"
                             />
                         </div>

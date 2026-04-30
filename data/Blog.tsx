@@ -2,7 +2,7 @@ export const blogs = [
   {
     id: 1,
     slug: "choose-right-box",
-    img: "/images/blog1.png",
+    img: "/images/post.jpeg",
     title: "How to Choose the Right Box",
     category: "Featured",
     excerpt: "Any type of business — whether it’s focused on ecommerce, retail, technology, or services — can benefit from publishing and maintaining a blog. By writing about topics that resonate with your audience and incorporating optimization tactics your business can experience a variety of benefits that result from having a blog.",
@@ -10,7 +10,7 @@ export const blogs = [
   {
     id: 2,
     slug: "packaging-guide",
-    img: "/images/blog2.png",
+    img: "/images/post2.jpg",
     title: "Step-by-Step Packaging Guide",
     category: "Step-By-Step Guides",
     excerpt: "Any type of business — whether it’s focused on ecommerce, retail, technology, or services — can benefit from publishing and maintaining a blog. By writing about topics that resonate with your audience and incorporating optimization tactics your business can experience a variety of benefits that result from having a blog.",
@@ -18,7 +18,7 @@ export const blogs = [
   {
     id: 3,
     slug: "retail-packaging",
-    img: "/images/blog1.png",
+    img: "/images/post.jpeg",
     title: "Retail Packaging Tips",
     category: "Retail Packaging",
     excerpt: "Any type of business — whether it’s focused on ecommerce, retail, technology, or services — can benefit from publishing and maintaining a blog. By writing about topics that resonate with your audience and incorporating optimization tactics your business can experience a variety of benefits that result from having a blog.",
@@ -26,7 +26,7 @@ export const blogs = [
   {
     id: 4,
     slug: "custom-box-design",
-    img: "/images/blog2.png",
+    img: "/images/post2.jpg",
     title: "Custom Box Design Ideas",
     category: "Box Customization",
     excerpt: "Any type of business — whether it’s focused on ecommerce, retail, technology, or services — can benefit from publishing and maintaining a blog. By writing about topics that resonate with your audience and incorporating optimization tactics your business can experience a variety of benefits that result from having a blog.",
@@ -34,7 +34,7 @@ export const blogs = [
   {
     id: 5,
     slug: "packaging-terms",
-    img: "/images/blog1.png",
+    img: "/images/post.jpeg",
     title: "Packaging Glossary Explained",
     category: "Packaging Glossary",
     excerpt: "Any type of business — whether it’s focused on ecommerce, retail, technology, or services — can benefit from publishing and maintaining a blog. By writing about topics that resonate with your audience and incorporating optimization tactics your business can experience a variety of benefits that result from having a blog.",
@@ -42,7 +42,7 @@ export const blogs = [
   {
     id: 6,
     slug: "creative-packaging",
-    img: "/images/blog2.png",
+    img: "/images/post2.jpg",
     title: "Creative Packaging Inspiration",
     category: "Inspiration",
     excerpt: "Any type of business — whether it’s focused on ecommerce, retail, technology, or services — can benefit from publishing and maintaining a blog. By writing about topics that resonate with your audience and incorporating optimization tactics your business can experience a variety of benefits that result from having a blog.",

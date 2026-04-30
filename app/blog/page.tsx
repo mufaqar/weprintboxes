@@ -8,7 +8,7 @@ const pageInfo = {
     title: "Blog Insights",
     desc: "We provide you the best packaging solutions with customized printed box service, which matches your industry and product specific needs. Get high-quality custom boxes with logo with a flexible and simple packaging process.",
 }
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 2;
 export default function BlogPage() {
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -40,15 +40,15 @@ export default function BlogPage() {
                             <PostBox key={idx} data={post} />
                         ))}
                     </div>
-                    <div className="flex justify-center mt-8 gap-2">
+                    <div className="flex justify-center mt-8 gap-2 py-3 px-4.5 rounded-[50px] bg-white w-fit mx-auto shadow-[-4px_7px_15px_rgb(0,0,0,0.08)]">
                         {Array.from({ length: totalPages }).map((_, i) => (
                             <button
                                 key={i}
                                 onClick={() => setCurrentPage(i + 1)}
-                                className={`px-4 py-2 rounded-lg border text-sm font-medium 
+                                className={`text-sm font-medium w-10 h-10 flex items-center justify-center rounded-full text-white
                                 ${currentPage === i + 1
-                                        ? "bg-primary text-white"
-                                        : "bg-white text-title border-[#e2e6ea] hover:bg-primary hover:text-white"
+                                        ? "bg-[linear-gradient(135deg,#383882_0%,#006039_100%)] shadow-[0_4px_10px_rgb(0,0,0,0.2) "
+                                        : "bg-primary text-title hover:bg-Wp_Green hover:text-white"
                                     }`}
                             >
                                 {i + 1}

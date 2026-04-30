@@ -1,7 +1,7 @@
 export const Navlinks = [
     {
         label: "Boxes by industry",
-        slug: "/all-products",
+        slug: "#",
         type: "mega" as const,
         children: [
             {
@@ -45,14 +45,14 @@ export const Navlinks = [
 
     {
         label: "Boxes By Style",
-        slug: "/industries",
+        slug: "#",
         type: "mega" as const,
         children: [
             {
                 items: [
                     {
                         label: "Top Tuck Auto-lock Boxes",
-                        slug: "/category/corrugated-boxes",
+                        slug: "/category/corrugated-boxeses",
                     },
                     {
                         label: "Mylar Bags",
@@ -89,12 +89,12 @@ export const Navlinks = [
 
     {
         label: "Boxes By Material",
-        slug: "/products",
+        slug: "#",
         type: "dropdown" as const,
         children: [
-            { label: "Corrugated", slug: "/material/corrugated" },
-            { label: "Kraft", slug: "/material/kraft" },
-            { label: "Rigid", slug: "/material/rigid" },
+            { label: "Corrugated", slug: "/category/corrugated-boxes" },
+            { label: "Kraft", slug: "/category/corrugated-boxes" },
+            { label: "Rigid", slug: "/category/corrugated-boxes" },
         ],
     },
 
